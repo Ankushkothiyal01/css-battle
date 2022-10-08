@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image3</title>
+    <style>
+        .cam{
+            width: 600px;
+            height: 400px;
+            background-color: rgb(70, 70, 70);
+            border-radius: 70px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0px 0px  40px 20px grey inset;
+
+        }
+        .cam::after{
+            content: '';
+            display: block;
+            width: 60px;
+            height: 10px;
+            border-radius: 50px 50px 0 0 ;
+            background: red;
+            position: absolute;
+            top: -5px;
+            left: 100px;
+            transform: translate(-50%, -50%);
+        }
+        .cam::before{
+            content: 'CXI';
+            display: block;
+            font-size: 50px;
+            font-weight: bold;
+            color: gold;
+            width: 60px;
+            height: 10px;
+            border-radius: 50px 50px 0 0 ;
+            position: absolute;
+            top: 300px;
+            left: 500px;
+            transform: translate(-50%, -50%);
+            text-shadow: 2px 2px black;
+        }
+        .click{
+            width: 170px;
+            height: 70px;
+            background-color: rgb(70, 70, 70);
+            position: absolute;
+            top: -35px;
+            left:50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0px 0px  10px 10px grey inset;
+            border-radius: 10px 10px 0 0 ;
+        }
+        .click::after{
+            content: '';
+            display: block;
+            width: 90px;
+            height: 50px;
+            border-radius: 5px;
+            background: #fff;
+            position: absolute;
+            top: 35px;
+            left: 85px;
+            transform: translate(-50%, -50%);
+            outline: 2px solid black;
+            box-shadow: 0px 0px  5px 10px rgb(153, 151, 151) inset,
+            0px 0px  10px 15px rgb(153, 151, 151) inset,
+            0px 0px  2px 23px rgb(153, 151, 151) inset;
+
+        }
+        .click::before{
+            content: '';
+            display: block;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #fff;
+            position: absolute;
+            top: 20px;
+            left: 153px;
+            transform: translate(-50%, -50%);
+            box-shadow:5px -10px  10px rgb(109, 107, 107) inset ;
+            z-index: 1;
+
+        }
+         #c1{
+        width: 240px;
+        aspect-ratio: 1;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        background:radial-gradient(
+            grey 5px ,0,
+            rgb(70, 70, 70) 10px ,0,
+            rgb(109, 107, 107) 15px ,0,
+            rgb(109, 107, 107) 30px ,0,
+            rgb(70, 70, 70) 40px ,0,
+            rgb(35, 33, 33) 41px ,0,
+            rgb(70, 70, 70) 44px ,0,
+            rgb(35, 33, 33) 45px ,0,
+            rgb(70, 70, 70) 49px ,0,
+            rgb(35, 33, 33) 50px ,0,
+            rgb(70, 70, 70) 54px ,0,
+            rgb(35, 33, 33) 55px ,0,
+            rgb(70, 70, 70) 59px ,0,
+            rgb(35, 33, 33) 60px ,0,
+            rgb(70, 70, 70) 64px ,0,
+            rgb(35, 33, 33) 65px ,0,
+            rgb(70, 70, 70) 69px ,0,
+            rgb(35, 33, 33) 70px ,0,
+            rgb(70, 70, 70) 74px ,0,
+            rgb(35, 33, 33) 75px ,0,
+            rgb(70, 70, 70) 79px ,0,
+            rgb(35, 33, 33) 80px ,0,
+            rgb(70, 70, 70) 84px ,0,
+            rgb(35, 33, 33) 85px ,0,
+            rgb(70, 70, 70) 89px ,0,
+            rgb(35, 33, 33) 90px ,0,
+            rgb(70, 70, 70) 94px ,0,
+            rgb(35, 33, 33) 95px ,0,
+            rgb(70, 70, 70) 99px ,0,
+            rgb(35, 33, 33) 100px ,0,
+            rgb(70, 70, 70) 110px ,0,
+            rgb(35, 33, 33) 120px ,0,
+            rgb(70, 70, 70)
+        );
+        border-radius: 50%;
+
+    }
+    .strip{
+        display: flex;
+        flex-direction: column;
+            width: 200px;
+            height: 60px;
+            background: black;
+            position: absolute;
+            top: 200px;
+            right: -100px;
+            transform: translate(-50%, -50%);
+    }
+    
+    </style>
+</head>
+<body>
+    <div class="cam">
+        <div id="c1"></div>
+        <div class="click"></div>
+        <div class="strip">
+            <span></span>
+            <span  style="height: 20px; background:white; margin-top: 20px;"></span>
+            <span></span>
+        </div>
+    </div>
+   
+</body>
+</html>
